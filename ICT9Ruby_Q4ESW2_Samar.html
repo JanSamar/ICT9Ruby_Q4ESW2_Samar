@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Conversion</title>
+    <style>
+        #background{
+            font-size: 27px;
+            background: black;
+            color: ghostwhite;
+            font-family: Arial;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="background">
+    <div class="row">
+       
+        <div class="col-xl-1 bg-primary"></div>
+
+         <center>     
+    <h1>Time Converter (Days)</h1>
+    <input type="text" id="id1" placeholder="Seconds Value"><br>
+    <button onclick="second()">Convert</button>
+    <p id="second"></p>
+
+    <input type="number" id="id2" placeholder="Minute Value"><br>
+    <button onclick="minute()">Convert</button>
+    <p id="cm"></p>
+
+    <input type="text" id="id3" placeholder="Hour Value"><br>
+    <button onclick="hour()">Convert</button>
+    <p id="hour"></p>  
+    </center>
+    <script>
+        function second() {
+            var x = document.getElementById('id1').value;
+            var second = x * 86400;
+            document.getElementById('second').innerHTML = "The answer is " + second + " seconds.";
+        }
+        function minute() {
+            var x = document.getElementById('id2').value;
+            var minute = x * 1440;
+            document.getElementById('cm').innerHTML = "The answer is " + minute + " minutes.";
+        }
+        function hour() {
+            var x = document.getElementById('id3').value;
+            var hour = x * 24;
+            document.getElementById('hour').innerHTML = "The answer is " + hour + " hours.";
+        }
+    </script>
+     <div class="row">
+        <div class="col-xl-2 bg-primary"></div>
+</body>
+</html>
